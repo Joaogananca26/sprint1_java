@@ -5,13 +5,13 @@ import br.com.fiap.sprint1.exception.CommitException;
 import br.com.fiap.sprint1.exception.UsuarioNaoEncotradoException;
 
 public interface UsuarioDAO {
-    public void cadastrarUsuario(Usuario usuario) throws UsuarioNaoEncotradoException;
+    public void cadastrarUsuario(Usuario usuario);
 
-    public void removerFuncionario(int id);
+    public void removerUsuario(int id) throws UsuarioNaoEncotradoException;
 
-    public void atualizarFuncionario(Usuario usuario) throws UsuarioNaoEncotradoException;
+    public void atualizarUsuario(Usuario usuario) throws UsuarioNaoEncotradoException;
 
-    Usuario buscarFuncionario(int id) throws UsuarioNaoEncotradoException;
+    Usuario buscarUsuario(int id) throws UsuarioNaoEncotradoException;
 
     void commit() throws CommitException;
 }
