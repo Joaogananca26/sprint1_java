@@ -10,92 +10,117 @@ public class Filial {
     @Id
     @Column(name = "id_filial")
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "filial")
-    protected int id;
+    protected int idFilial;
 
     @Column(name = "nome_filial", length = 255, nullable = false)
-    protected String nome;
+    protected String nomeFilial;
 
     @Column(name = "pais_filial", length = 50, nullable = false)
-    protected String pais;
+    protected String paisFilial;
 
     @Column(name = "estado_filial", length = 50, nullable = false)
-    protected String estado;
+    protected String estadoFilial;
 
     @Column(name = "cidade_filial", length = 50, nullable = false)
-    protected String cidade;
+    protected String cidadeFilial;
 
     @Column(name = "rua_filial", length = 255, nullable = false)
-    protected String rua;
+    protected String ruaFilial;
+
+    @Column(name = "bairro_filial", length = 50, nullable = false)
+    protected String bairroFilial;
 
     @Column(name = "numero_filial", length = 10, nullable = false)
-    protected int numero;
+    protected int numeroFilial;
+
+    @Column(name = "telefone_filial", length = 13, nullable = false)
+    protected String telefoneFilial;
 
     public Filial(){
     }
 
-    public Filial(int id, String nome, String pais, String estado, String cidade, String rua, int numero) {
-        this.id = id;
-        this.nome = nome;
-        this.pais = pais;
-        this.estado = estado;
-        this.cidade = cidade;
-        this.rua = rua;
-        this.numero = numero;
+    public Filial(int idFilial, String nomeFilial, String paisFilial, String estadoFilial, String cidadeFilial, String ruaFilial, int numeroFilial, String bairroFilial, String telefoneFilial) {
+        this.idFilial = idFilial;
+        this.nomeFilial = nomeFilial;
+        this.paisFilial = paisFilial;
+        this.estadoFilial = estadoFilial;
+        this.cidadeFilial = cidadeFilial;
+        this.ruaFilial = ruaFilial;
+        this.numeroFilial = numeroFilial;
+        this.bairroFilial = bairroFilial;
+        this.telefoneFilial = telefoneFilial;
     }
 
-    public int getId() {
-        return id;
+
+    public int getIdFilial() {
+        return idFilial;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setIdFilial(int idFilial) {
+        this.idFilial = idFilial;
     }
 
-    public String getNome() {
-        return nome;
+    public String getNomeFilial() {
+        return nomeFilial;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setNomeFilial(String nomeFilial) {
+        this.nomeFilial = nomeFilial;
     }
 
-    public String getPais() {
-        return pais;
+    public String getPaisFilial() {
+        return paisFilial;
     }
 
-    public void setPais(String pais) {
-        this.pais = pais;
+    public void setPaisFilial(String paisFilial) {
+        this.paisFilial = paisFilial;
     }
 
-    public String getEstado() {
-        return estado;
+    public String getEstadoFilial() {
+        return estadoFilial;
     }
 
-    public void setEstado(String estado) {
-        this.estado = estado;
+    public void setEstadoFilial(String estadoFilial) {
+        this.estadoFilial = estadoFilial;
     }
 
-    public String getCidade() {
-        return cidade;
+    public String getCidadeFilial() {
+        return cidadeFilial;
     }
 
-    public void setCidade(String cidade) {
-        this.cidade = cidade;
+    public void setCidadeFilial(String cidadeFilial) {
+        this.cidadeFilial = cidadeFilial;
     }
 
-    public String getRua() {
-        return rua;
+    public String getRuaFilial() {
+        return ruaFilial;
     }
 
-    public void setRua(String rua) {
-        this.rua = rua;
+    public void setRuaFilial(String ruaFilial) {
+        this.ruaFilial = ruaFilial;
     }
 
-    public int getNumero() {
-        return numero;
+    public String getBairroFilial() {
+        return bairroFilial;
     }
 
-    public void setNumero(int numero) {
-        this.numero = numero;
+    public void setBairroFilial(String bairroFilial) {
+        this.bairroFilial = bairroFilial;
+    }
+
+    public int getNumeroFilial() {
+        return numeroFilial;
+    }
+
+    public void setNumeroFilial(int numeroFilial) {
+        this.numeroFilial = numeroFilial;
+    }
+
+    public String getTelefoneFilial() {
+        return telefoneFilial;
+    }
+
+    public void setTelefoneFilial(String telefoneFilial) {
+        this.telefoneFilial = telefoneFilial;
     }
 }
