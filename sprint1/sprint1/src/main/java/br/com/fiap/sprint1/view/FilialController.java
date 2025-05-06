@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class FilialController {
 
     @Autowired
-    private FilialRepository dao;
+    private FilialRepository filialRepository;
 
 
 }

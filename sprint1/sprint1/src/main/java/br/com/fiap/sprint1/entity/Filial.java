@@ -3,6 +3,9 @@ package br.com.fiap.sprint1.entity;
 
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity
 @Table(name="TB_FILIAL")
 @SequenceGenerator(name="filial", sequenceName = "tb_filial_id_filial_seq", allocationSize = 1)
@@ -35,6 +38,9 @@ public class Filial {
 
     @Column(name = "telefone_filial", length = 13, nullable = false)
     protected String telefoneFilial;
+
+    @OneToMany(mappedBy = "filial", cascade = CascadeType.MERGE)
+    private List<Usuario> usuarios = new ArrayList<Usuario>();
 
     public Filial(){
     }

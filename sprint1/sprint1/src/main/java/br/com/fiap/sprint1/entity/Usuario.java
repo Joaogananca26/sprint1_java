@@ -31,6 +31,10 @@ public class Usuario {
     @Column(name = "senha_usuario", length = 100, nullable = false)
     protected String senhaUsuario;
 
+    @ManyToOne(cascade = CascadeType.MERGE)
+    @JoinColumn(name = "id_filial", nullable = false)
+    private Filial filial;
+
     public Usuario(){
 
     }
